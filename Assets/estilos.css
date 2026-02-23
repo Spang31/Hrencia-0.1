@@ -7,6 +7,7 @@ body {
     margin: 0;
     font-family: "Poppins", sans-serif;
     background-color: black;
+
 }
 
 
@@ -66,11 +67,12 @@ header {
 
 .cart-icon {
     margin-left: auto;
+    margin-right: 50px;
+    background: none;
+    border: none;
     position: relative;
     cursor: pointer;
-    margin-right: 50px; /* 🔥 esto lo mete hacia adentro */
 }
-
 
 .cart-icon img {
     width: 26px;
@@ -170,7 +172,6 @@ nav a::before {
 ====================================== */
 
 @media (min-width: 900px) {
-
     /* Ocultar menú móvil */
     .menu-icon,
     nav {
@@ -195,7 +196,6 @@ nav a::before {
         padding: 12px 35px;
         border-radius: 50px;
         backdrop-filter: blur(10px);
-
         box-shadow:
             0 2px 5px rgba(0, 21, 255, 0.7),
             0 4px 10px rgba(0, 30, 255, 0.5),
@@ -210,221 +210,197 @@ nav a::before {
     }
 }
 
+/* ======================================
+   CARRUSEL
+====================================== */
 
+.carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    height: 86.3vh;
+}
 
-        .carrusel {
-            display: flex;
-            justify-content: center;   /* Centra horizontalmente */
-            align-items: center;       /* Centra verticalmente */
-            overflow: hidden;
-            margin-top: 100px;
-            position: relative;
-            width: 100%;
-            height: 86.3vh;              /* o la altura que quieras */
-        }
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
 
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-        /* Cada imagen */
-        .slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1.2s ease-in-out;
-        }
+.slide.active {
+    opacity: 1;
+}
 
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* recorte estilo KOAJ */
-        }
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    user-select: none;
+    font-weight: bold;
+}
 
-        /* La activa */
-        .slide.active {
-            opacity: 1;
-        }
+.arrow:hover {
+    transform: translateY(-50%) scale(1.12);
+}
 
+.left { left: 20px; }
+.right { right: 20px; }
 
-        
-        /* Flechas KOAJ */
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 42px;
-            height: 42px;
-            background: white;
-            color: black;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            cursor: pointer;
-            transition: 0.3s ease;
-            user-select: none;
-            font-weight: bold;
-        }
+@media (max-width: 768px) {
+    .carrusel {
+        height: 75vh;
+    }
+    .arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+}
 
-        .arrow:hover {
-            transform: translateY(-50%) scale(1.12);
-        }
+/* ======================================
+   TEXTO ESTILO ADIDAS / INFO
+====================================== */
 
-        .left { left: 20px; }
-        .right { right: 20px; }
+.herencia-info {
+    padding: 60px 10%;
+    color: white;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+}
 
-        /* Versión móvil */
-        @media (max-width: 768px) {
-            .carrusel {
-                height: 75vh;
-            }
+.herencia-info h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: white;
+}
 
-            .arrow {
-                width: 35px;
-                height: 35px;
-                font-size: 20px;
-            }
-        }
+.herencia-info p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    opacity: 0.88;
+}
 
+/* ======================================
+   FOOTER
+====================================== */
 
+.footer {
+    background: black;
+    padding: 45px 0;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
 
+.footer-content {
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        /* ====== TEXTO ESTILO ADIDAS ====== */
+.social img {
+    width: 27px;
+    filter: invert(1);
+    opacity: .85;
+    transition: 0.25s ease;
+}
+
+.social img:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.footer-logo img {
+    width: 80px;
+    opacity: .9;
+}
+
+@media (max-width: 768px) {
     .herencia-info {
-        padding: 60px 10%;
-        color: white;
-        text-align: left;
-        font-family: "Poppins", sans-serif;
+        padding: 45px 7%;
     }
-
     .herencia-info h2 {
         font-family: "Bebas Neue", sans-serif;
         font-size: 48px;
         margin-bottom: 20px;
-        letter-spacing: 1px;
-        color: white;
-    }
-
-    .herencia-info p {
-        font-size: 17px;
-        line-height: 1.6;
-        margin-bottom: 18px;
-        opacity: 0.88;
-    }
-
-
-    /* ====== FOOTER ====== */
-    .footer {
-        background: black;
-        padding: 45px 0;
-        display: flex;
-        justify-content: center;
-        border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .footer-content {
-        width: 90%;
-        max-width: 1100px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .social img {
-        width: 27px;   /* puedes subir a 30–35 si los quieres más grandes */
-        filter: invert(1); /* Hace blanco tu SVG si originalmente es negro */
-        opacity: .85;
-        transition: 0.25s ease;
-    }
-
-    .social img:hover {
-        opacity: 1;
-        transform: scale(1.15);
-    }
-
-
-    .footer-logo img {
-        width: 80px;
-        opacity: .9;
-    }
-
-
-    /* ====== RESPONSIVE ====== */
-    @media (max-width: 768px) {
-
-        .herencia-info {
-            padding: 45px 7%;
-        }
-
-    .herencia-info h2 {
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 48px;
-        margin-bottom: 20px;
-        letter-spacing: 1px;
-        color: rgb(233, 228, 219); /* ✔ COLOR IGUAL QUE EL LOGO */
-    }
-
-
-        .herencia-info p {
-            font-size: 15px;
-        }
-
-
-
-        .footer-content {
-            flex-direction: column;
-            gap: 25px;
-            text-align: center;
-        }
-
-        .social a {
-            margin-right: 10px;
-        }
-    }
-/* ===============================
-   SECCIÓN CAMISETAS / CATÁLOGO
-=================================*/
-
-    .catalogo {
-        padding: 110px 5%;
-        color: white;
-        text-align: center;
-    }
-
-    /* TÍTULO */
-    .categoria-titulo,
-    .catalogo h2 {
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 48px;
-        margin: 40px 0 30px;
         letter-spacing: 1px;
         color: rgb(233, 228, 219);
     }
-
-    /* ===============================
-    GRID PRODUCTOS CAMISETAS
-    =================================*/
-
-    .categoria-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 22px;
-        width: 100%;
+    .herencia-info p {
+        font-size: 15px;
     }
-
-    /* PRODUCTO */
-    .producto {
-        position: relative;
-        overflow: hidden;
-        border-radius: 14px;
-        cursor:auto;
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
     }
+    .social a {
+        margin-right: 10px;
+    }
+}
 
+/* ======================================
+   SECCIÓN CAMISETAS / CATÁLOGO
+====================================== */
 
+.catalogo {
+    padding: 110px 5%;
+    color: white;
+    text-align: center;
+}
 
-/* BOTÓN CARRITO SUPERIOR DERECHA */
+.categoria-titulo,
+.catalogo h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    margin: 40px 0 30px;
+    letter-spacing: 1px;
+    color: rgb(233, 228, 219);
+}
+
+.categoria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    width: 100%;
+}
+
+.producto {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    cursor: auto;
+}
+
 .producto .add-to-cart {
-    
     position: absolute;
     top: 12px;
     right: 12px;
@@ -436,20 +412,18 @@ nav a::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor:grab;
+    cursor: pointer;
     opacity: 0;
     transition: opacity .3s ease, transform .2s ease;
     z-index: 4;
 }
 
-/* Imagen dentro */
 .producto .add-to-cart img {
     width: 22px;
     height: 22px;
     object-fit: contain;
 }
 
-/* Hover PC */
 .producto:hover .add-to-cart {
     opacity: 1;
 }
@@ -458,57 +432,49 @@ nav a::before {
     transform: scale(1.12);
 }
 
+.producto .slider {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4.5;
+    overflow: hidden;
+}
 
+.producto .slider img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .5s ease, transform .35s ease, filter .35s ease;
+}
 
-    /* ===== SLIDER ===== */
+.producto .slider img.active {
+    opacity: 1;
+    z-index: 1;
+}
 
-    .producto .slider {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 3 / 4.5;
-        overflow: hidden;
-    }
+.producto span {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 26px;
+    color: white;
+    opacity: 0;
+    transition: opacity .3s ease;
+    text-shadow: 0 0 10px rgba(0,0,0,.9);
+    z-index: 2;
+}
 
-    /* IMÁGENES */
-    .producto .slider img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0;
-        transition: opacity .5s ease, transform .35s ease, filter .35s ease;
-    }
+.producto:hover .slider img.active {
+    transform: scale(1.08);
+    filter: brightness(55%);
+}
 
-    /* IMAGEN ACTIVA */
-    .producto .slider img.active {
-        opacity: 1;
-        z-index: 1;
-    }
-
-    /* PRECIO */
-    .producto span {
-        position: absolute;
-        bottom: 14px;
-        left: 14px;
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 26px;
-        color: white;
-        opacity: 0;
-        transition: opacity .3s ease;
-        text-shadow: 0 0 10px rgba(0,0,0,.9);
-        z-index: 2;
-    }
-
-    /* HOVER */
-    .producto:hover .slider img.active {
-        transform: scale(1.08);
-        filter: brightness(55%);
-    }
-
-    .producto:hover span {
-        opacity: 1;
-    }
+.producto:hover span {
+    opacity: 1;
+}
 
 /* ===============================
    RESPONSIVE
@@ -527,39 +493,23 @@ nav a::before {
 
 /* Móvil */
 @media (max-width: 600px) {
-
     .producto .add-to-cart {
-    opacity: 1;
-    width: 32px;
-    height: 32px;
-    top: 8px;
-    right: 8px;
-}
-
-
+        opacity: 1;
+        width: 32px;
+        height: 32px;
+        top: 8px;
+        right: 8px;
+    }
     .categoria-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 14px;
     }
-
-    /* PRECIO */
     .producto span {
         font-size: 18px;
-        opacity: 1;           /* siempre visible */
+        opacity: 1;
         bottom: 12px;
         left: 10px;
     }
-
-    /* BOTÓN CARRITO */
-    .producto .add-to-cart {
-        opacity: 1;           /* siempre visible */
-        width: 32px;
-        height: 32px;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    /* Quitar efecto hover oscuro en móvil */
     .producto:hover .slider img.active {
         transform: none;
         filter: none;
@@ -573,8 +523,9 @@ nav a::before {
 
 .categorias-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
     gap: 35px;
+    justify-content: center;
 }
 
 .categorias-grid u {
@@ -589,14 +540,19 @@ nav a::before {
     border-radius: 12px;
     cursor: pointer;
     display: block;
+    height: 500px;
+    max-width: 360px;
+    margin: 0 auto;
 }
 
 .cat-item img {
     width: 100%;
-    height: 500px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
     transition: .35s ease;
     display: block;
+    background: #1a1a1a;
 }
 
 .cat-item:hover img {
@@ -625,7 +581,7 @@ nav a::before {
         gap: 20px;
     }
 
-    .cat-item img {
+    .cat-item {
         height: 350px;
     }
 
@@ -635,3 +591,190 @@ nav a::before {
         left: 18px;
     }
 }
+
+
+/* ==============================
+   NOTIFICACIÓN CARRITO
+============================== */
+
+.notificacion {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.95);
+    color: white;
+    padding: 14px 22px;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .4s ease;
+    z-index: 4000;
+}
+
+.notificacion.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+/* ================= PANEL CARRITO ================= */
+
+.panel-carrito {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100vh;
+    background: white;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.panel-carrito.active {
+    right: 0;
+}
+
+
+.lista-carrito {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+/* ITEM CARRITO */
+.item-carrito {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #222;
+}
+
+/* IMAGEN */
+.carrito-img {
+    width: 97px;
+    height: 122px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* DETALLES */
+.item-detalles {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nombre {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+}
+
+.precio {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* CONTROLES + - */
+.controles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.controles button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.controles button:hover {
+    opacity: 0.8;
+}
+
+.controles span {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* ELIMINAR */
+.btn-eliminar {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* TOTAL */
+.total {
+    font-size: 22px;
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 20px;
+    text-align: right;
+}
+
+
+
+/* ================= BOTONES BLOQUEADOS ================= */
+
+.bloqueado {
+    opacity: .5;
+    pointer-events: none;
+}
+
+
+
+
+
+@media (max-width: 480px) {
+
+    .panel-carrito {
+        width: 90%;          /* más fino */
+        max-width: 340px;    /* perfecto para 360px */
+        right: -100%;
+        padding: 20px;
+    }
+
+    .panel-carrito.active {
+        right: 0;
+    }
+
+    .panel-carrito h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .item-carrito {
+        gap: 10px;
+    }
+
+    .carrito-img {
+        width: 70px;
+        height: 95px;
+    }
+
+}
+
+
+

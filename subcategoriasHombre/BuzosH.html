@@ -59,15 +59,15 @@
         <!-- PRODUCTO 1 -->
         <div class="producto"
              data-name="Buso Contoda"
-             data-price="44000">
+             data-price="85000">
 
             <div class="slider">
-                <img src="../Ropa/IntiD.jpg" class="active">
+                <img src="/Models/Mcontoda.png" class="active">
                 <img src="../Ropa/Sacos/ContodaD.png">
                 <img src="../Ropa/Sacos/ContodaT.png">
             </div>
 
-            <span>44.000 COP</span>
+            <span>88.000 COP</span>
 
             <button class="add-to-cart">
                 <img src="/svg/Añade.svg" alt="Agregar al carrito">
@@ -135,6 +135,27 @@
     </div>
 
 </section>
+
+<!-- ================= PANEL CARRITO ================= -->
+<div id="panelCarrito" class="panel-carrito">
+    <h2>Tu carrito</h2>
+
+    <div id="listaCarrito" class="lista-carrito"></div>
+
+    <div class="total">
+        Total: <span id="totalCarrito">0</span> COP
+    </div>
+    <button id="cerrarCarrito" class="btn-cerrar">
+    Cerrar menú
+</button>
+
+
+<a href="/Assets/FinalizarPedido.html">
+    <button id="finalizarCompra">Finalizar Pedido</button>
+</a>
+
+
+</div>
 
 <script src="../Assets/lenguaje.js"></script>
 

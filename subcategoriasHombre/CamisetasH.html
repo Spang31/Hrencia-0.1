@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camisetas Hombre</title>
+    <title>Camisetas Hombre | Herencia</title>
 
     <!-- FAVICON -->
     <link rel="icon" href="../Assets/Favicon.png">
@@ -30,7 +30,7 @@
     <div class="logo">Herencia</div>
 
     <div class="cart-icon" id="cartBtn">
-        <img src="/svg/Carrito.svg" alt="Carrito">
+        <img src="../svg/Carrito.svg" alt="Carrito de compras">
         <span id="cartCount">0</span>
     </div>
 </header>
@@ -64,15 +64,15 @@
              data-price="44000">
 
             <div class="slider">
-                <img src="../Ropa/IntiD.jpg" class="active">
-                <img src="../Ropa/Camisetas/IntiD.png">
-                <img src="../Ropa/Camisetas/IntiT.png">
+                <img src="../Ropa/IntiD.jpg" class="active" alt="Camiseta Inti vista frontal">
+                <img src="../Ropa/Camisetas/IntiD.png" alt="Camiseta Inti detalle diseño">
+                <img src="../Ropa/Camisetas/IntiT.png" alt="Camiseta Inti vista trasera">
             </div>
 
             <span>44.000 COP</span>
 
             <button class="add-to-cart">
-                <img src="/svg/Añade.svg" alt="Agregar al carrito">
+                <img src="../svg/Añade.svg" alt="Agregar Camiseta Inti al carrito">
             </button>
 
         </div>
@@ -83,15 +83,15 @@
              data-price="44000">
 
             <div class="slider">
-                <img src="../Ropa/Condor.png" class="active">
-                <img src="../Ropa/Camisetas/CondorD.png">
-                <img src="../Ropa/Camisetas/CondorT.png">
+                <img src="../Ropa/Condor.png" class="active" alt="Camiseta Cóndor vista frontal">
+                <img src="../Ropa/Camisetas/CondorD.png" alt="Camiseta Cóndor detalle diseño">
+                <img src="../Ropa/Camisetas/CondorT.png" alt="Camiseta Cóndor vista trasera">
             </div>
 
             <span>44.000 COP</span>
 
             <button class="add-to-cart">
-                <img src="/svg/Añade.svg" alt="Agregar al carrito">
+                <img src="../svg/Añade.svg" alt="Agregar Camiseta Cóndor al carrito">
             </button>
 
         </div>
@@ -102,15 +102,15 @@
              data-price="85000">
 
             <div class="slider">
-                <img src="../Ropa/Azteca-frente.jpg" class="active">
-                <img src="../Ropa/Camisetas/6402D.png">
-                <img src="../Ropa/Camisetas/6402T.png">
+                <img src="/Models/6402MD.png" class="active" alt="Camiseta 6402 vista frontal">
+                <img src="../Ropa/Camisetas/6402D.png" alt="Camiseta 6402 detalle diseño">
+                <img src="../Ropa/Camisetas/6402T.png" alt="Camiseta 6402 vista trasera">
             </div>
 
             <span>85.000 COP</span>
 
             <button class="add-to-cart">
-                <img src="/svg/Añade.svg" alt="Agregar al carrito">
+                <img src="../svg/Añade.svg" alt="Agregar Camiseta 6402 al carrito">
             </button>
 
         </div>
@@ -121,15 +121,15 @@
              data-price="85000">
 
             <div class="slider">
-                <img src="../Ropa/Maya-frente.jpg" class="active">
-                <img src="../Ropa/Maya-atras.jpg">
-                <img src="../Ropa/Maya-modelo.jpg">
+                <img src="../Ropa/Maya-frente.jpg" class="active" alt="Camiseta Maya vista frontal">
+                <img src="../Ropa/Maya-atras.jpg" alt="Camiseta Maya vista trasera">
+                <img src="../Ropa/Maya-modelo.jpg" alt="Camiseta Maya en modelo">
             </div>
 
             <span>85.000 COP</span>
 
             <button class="add-to-cart">
-                <img src="../svg/Carrito.svg" alt="Agregar al carrito">
+                <img src="../svg/Añade.svg" alt="Agregar Camiseta Maya al carrito">
             </button>
 
         </div>
@@ -137,6 +137,28 @@
     </div>
 
 </section>
+
+<!-- ================= PANEL CARRITO ================= -->
+<div id="panelCarrito" class="panel-carrito">
+    <h2>Tu carrito</h2>
+
+    <div id="listaCarrito" class="lista-carrito"></div>
+
+    <div class="total">
+        Total: <span id="totalCarrito">0</span> COP
+    </div>
+
+    <button id="cerrarCarrito" class="btn-cerrar">
+        Cerrar menú
+    </button>
+
+    <a href="../Assets/FinalizarPedido.html">
+        <button id="finalizarCompra">
+            Finalizar Pedido
+        </button>
+    </a>
+
+</div>
 
 <!-- ================= JS ================= -->
 <script src="../Assets/lenguaje.js"></script>

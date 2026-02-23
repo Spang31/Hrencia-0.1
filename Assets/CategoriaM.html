@@ -27,11 +27,11 @@
     <div class="logo">Herencia</div>
 
     <div class="cart-icon" id="cartBtn">
-    <img src="/svg/Carrito.svg" alt="Carrito">
-    <span id="cartCount">0</span>
-</div>
-
+        <img src="/svg/Carrito.svg" alt="Carrito">
+        <span id="cartCount">0</span>
+    </div>
 </header>
+
 
 <!-- MENU LATERAL -->
 <nav id="menu">
@@ -85,7 +85,26 @@
     </div>
 </section>
 
+<!-- ================= PANEL CARRITO ================= -->
+<div id="panelCarrito" class="panel-carrito">
+    <h2>Tu carrito</h2>
 
+    <div id="listaCarrito" class="lista-carrito"></div>
+
+    <div class="total">
+        Total: <span id="totalCarrito">0</span> COP
+    </div>
+    <button id="cerrarCarrito" class="btn-cerrar">
+    Cerrar menú
+</button>
+
+
+<a href="/Assets/FinalizarPedido.html">
+    <button id="finalizarCompra">Finalizar Pedido</button>
+</a>
+
+
+</div>
 
 <!-- JS -->
 <script src="/Assets/lenguaje.js"></script>
