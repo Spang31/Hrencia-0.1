@@ -1,8 +1,14 @@
 import express from "express";
 import mercadopago from "mercadopago";
+import path from "path";
+import { fileURLToPath } from "url";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 app.use(express.json());
+
+// Servir archivos estáticos (HTML, CSS, JS, imágenes) desde la raíz del proyecto
+app.use(express.static(path.join(__dirname, "..")));
 
 mercadopago.configure({
   access_token: "TU_ACCESS_TOKEN_DE_MERCADO_PAGO"
