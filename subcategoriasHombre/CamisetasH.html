@@ -6,7 +6,7 @@
     <title>Camisetas Hombre | Herencia</title>
 
     <!-- FAVICON -->
-    <link rel="icon" href="../Assets/Favicon.png">
+    <link rel="icon" type="image/png" href="../Assets/Favicon.png">
 
     <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,6 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
     <div class="menu-icon" id="menuBtn">
         <span></span>
@@ -35,14 +34,14 @@
     </div>
 </header>
 
-<!-- ================= MENÚ MÓVIL ================= -->
+<!-- MENÚ MÓVIL -->
 <nav id="menu">
     <a href="../index.html">Inicio</a>
     <a href="../Assets/CategoriaH.html">Hombre</a>
     <a href="../Assets/CategoriaM.html">Mujer</a>
 </nav>
 
-<!-- ================= MENÚ PC ================= -->
+<!-- MENÚ PC -->
 <div class="menu-pc">
     <ul>
         <li><a href="../index.html">Inicio</a></li>
@@ -51,94 +50,65 @@
     </ul>
 </div>
 
-<!-- ================= CATÁLOGO ================= -->
 <section class="catalogo">
-
     <h2 class="categoria-titulo">Camisetas</h2>
 
     <div class="categoria-grid">
 
         <!-- PRODUCTO 1 -->
-        <div class="producto"
-             data-name="Camiseta Inti"
-             data-price="44000">
-
+        <div class="producto" data-name="Camiseta Inti" data-price="44000">
             <div class="slider">
-                <img src="../Ropa/IntiD.jpg" class="active" alt="Camiseta Inti vista frontal">
-                <img src="../Ropa/Camisetas/IntiD.png" alt="Camiseta Inti detalle diseño">
-                <img src="../Ropa/Camisetas/IntiT.png" alt="Camiseta Inti vista trasera">
+                <img src="../Ropa/Camisetas/IntiD.png" class="active" alt="Camiseta Inti frontal">
+                <img src="../Ropa/Camisetas/IntiT.png" alt="Camiseta Inti trasera">
             </div>
-
             <span>44.000 COP</span>
-
             <button class="add-to-cart">
-                <img src="../svg/Añade.svg" alt="Agregar Camiseta Inti al carrito">
+                <img src="../svg/Añade.svg" alt="Agregar Camiseta Inti">
             </button>
-
         </div>
 
         <!-- PRODUCTO 2 -->
-        <div class="producto"
-             data-name="Camiseta Cóndor"
-             data-price="44000">
-
+        <div class="producto" data-name="Camiseta Cóndor" data-price="44000">
             <div class="slider">
-                <img src="../Ropa/Condor.png" class="active" alt="Camiseta Cóndor vista frontal">
-                <img src="../Ropa/Camisetas/CondorD.png" alt="Camiseta Cóndor detalle diseño">
-                <img src="../Ropa/Camisetas/CondorT.png" alt="Camiseta Cóndor vista trasera">
+                <img src="../Ropa/Camisetas/CondorD.png" class="active" alt="Camiseta Cóndor frontal">
+                <img src="../Ropa/Camisetas/CondorT.png" alt="Camiseta Cóndor trasera">
             </div>
-
             <span>44.000 COP</span>
-
             <button class="add-to-cart">
-                <img src="../svg/Añade.svg" alt="Agregar Camiseta Cóndor al carrito">
+                <img src="../svg/Añade.svg" alt="Agregar Camiseta Cóndor">
             </button>
-
         </div>
 
         <!-- PRODUCTO 3 -->
-        <div class="producto"
-             data-name="Camiseta 6402"
-             data-price="85000">
-
+        <div class="producto" data-name="Camiseta 6402" data-price="85000">
             <div class="slider">
-                <img src="../Models/6402MD.png" class="active" alt="Camiseta 6402 vista frontal">
-                <img src="../Ropa/Camisetas/6402D.png" alt="Camiseta 6402 detalle diseño">
-                <img src="../Ropa/Camisetas/6402T.png" alt="Camiseta 6402 vista trasera">
+                <img src="../Models/6402MD.png" class="active" alt="Camiseta 6402 frontal">
+                <img src="../Ropa/Camisetas/6402D.png" alt="Camiseta 6402 detalle">
+                <img src="../Ropa/Camisetas/6402T.png" alt="Camiseta 6402 trasera">
             </div>
-
             <span>85.000 COP</span>
-
             <button class="add-to-cart">
-                <img src="../svg/Añade.svg" alt="Agregar Camiseta 6402 al carrito">
+                <img src="../svg/Añade.svg" alt="Agregar Camiseta 6402">
             </button>
-
         </div>
 
         <!-- PRODUCTO 4 -->
-        <div class="producto"
-             data-name="Camiseta Maya"
-             data-price="85000">
-
+        <div class="producto" data-name="Camiseta Maya" data-price="85000">
             <div class="slider">
-                <img src="../Ropa/Maya-frente.jpg" class="active" alt="Camiseta Maya vista frontal">
-                <img src="../Ropa/Maya-atras.jpg" alt="Camiseta Maya vista trasera">
-                <img src="../Ropa/Maya-modelo.jpg" alt="Camiseta Maya en modelo">
+                <img src="../Ropa/Maya-frente.jpg" class="active" alt="Camiseta Maya frontal">
+                <img src="../Ropa/Maya-atras.jpg" alt="Camiseta Maya trasera">
+                <img src="../Ropa/Maya-modelo.jpg" alt="Camiseta Maya modelo">
             </div>
-
             <span>85.000 COP</span>
-
             <button class="add-to-cart">
-                <img src="../svg/Añade.svg" alt="Agregar Camiseta Maya al carrito">
+                <img src="../svg/Añade.svg" alt="Agregar Camiseta Maya">
             </button>
-
         </div>
 
     </div>
-
 </section>
 
-<!-- ================= PANEL CARRITO ================= -->
+<!-- PANEL CARRITO -->
 <div id="panelCarrito" class="panel-carrito">
     <h2>Tu carrito</h2>
 
@@ -153,14 +123,10 @@
     </button>
 
     <a href="../Assets/FinalizarPedido.html">
-        <button id="finalizarCompra">
-            Finalizar Pedido
-        </button>   
+        <button id="finalizarCompra">Finalizar Pedido</button>
     </a>
-
 </div>
 
-<!-- ================= JS ================= -->
 <script src="../Assets/lenguaje.js"></script>
 
 </body>

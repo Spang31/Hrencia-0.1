@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categoria Hombre</title>
-    <!-- Base: raíz del proyecto para que Buzos, Camisetas, etc. funcionen en GitHub Pages y servidor local -->
-    <base href="../">
 
-    <link rel="icon" type="image/png" href="Assets/Favicon.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../Assets/Favicon.png">
+
     <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="Assets/estilos.css">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Assets/estilos.css">
 </head>
 
 <body ondragstart="return false" 
@@ -22,7 +22,6 @@
       oncontextmenu="return false">
 
 <header>
-    <!-- Menú hamburguesa -->
     <div class="menu-icon" id="menuBtn">
         <span></span>
         <span></span>
@@ -32,37 +31,31 @@
     <div class="logo">Herencia</div>
 
     <div class="cart-icon" id="cartBtn">
-        <img src="../svg/Carrito.svg">
+        <img src="../svg/Carrito.svg" alt="Carrito">
         <span id="cartCount">0</span>
     </div>
 </header>
 
-
-<!-- MENU LATERAL -->
 <nav id="menu">
-    <a href="index.html">Inicio</a>
-    <a href="Assets/CategoriaH.html">Hombre</a>
-    <a href="Assets/CategoriaM.html">Mujer</a>
+    <a href="../index.html">Inicio</a>
+    <a href="CategoriaH.html">Hombre</a>
+    <a href="CategoriaM.html">Mujer</a>
 </nav>
 
-<!-- MENÚ PC -->
 <div class="menu-pc">
     <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="Assets/CategoriaH.html">Hombre</a></li>
-        <li><a href="Assets/CategoriaM.html">Mujer</a></li>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="CategoriaH.html">Hombre</a></li>
+        <li><a href="CategoriaM.html">Mujer</a></li>
     </ul>
 </div>
 
-<!-- ===================== -->
-<!--     CATÁLOGO          -->
-<!-- ===================== -->
 <section class="catalogo">
     <h2>Colecciones</h2>
 
     <div class="categorias-grid">
 
-        <a href="subcategoriasHombre/BuzosH.html" class="cat-item">
+        <a href="../subcategoriasHombre/BuzosH.html" class="cat-item">
             <img src="../Models/Mcontoda.png" alt="Buzo oversize">
             <span>Buzos</span>
         </a>
@@ -72,7 +65,7 @@
             <span>Pantalones</span>
         </a>
 
-        <a href="subcategoriasHombre/CamisetasH.html" class="cat-item">
+        <a href="../subcategoriasHombre/CamisetasH.html" class="cat-item">
             <img src="https://marketplace.canva.com/EAGP_eBhZEU/1/0/1131w/canva-documento-a4-hoja-de-papel-con-flores-delicado-blanco-y-negro-RG8qqPH5wj4.jpg" alt="Camisa">
             <span>Camisetas</span>
         </a>
@@ -85,9 +78,6 @@
     </div>
 </section>
 
-
-
-<!-- ================= PANEL CARRITO ================= -->
 <div id="panelCarrito" class="panel-carrito">
     <h2>Tu carrito</h2>
 
@@ -101,14 +91,12 @@
         Cerrar menú
     </button>
 
-<a href="Assets/FinalizarPedido.html">
-    <button id="finalizarCompra">Finalizar Pedido</button>
-</a>
-
+    <a href="../Assets/FinalizarPedido.html">
+        <button id="finalizarCompra">Finalizar Pedido</button>
+    </a>
 </div>
 
-<!-- JS (MISMA CARPETA) -->
-<script src="Assets/lenguaje.js"></script>
+<script src="../Assets/lenguaje.js"></script>
 
 </body>
 </html>
