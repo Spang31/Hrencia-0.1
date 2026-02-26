@@ -372,7 +372,7 @@ nav a::before {
 ====================================== */
 
 .catalogo {
-    padding: 110px 5%;
+    padding: 110px 5% 70px;
     color: white;
     text-align: center;
 }
@@ -384,6 +384,17 @@ nav a::before {
     margin: 40px 0 30px;
     letter-spacing: 1px;
     color: rgb(233, 228, 219);
+}
+
+/* Segunda sección de catálogos (por ejemplo, BOXY) más pegada a la anterior */
+.catalogo + .catalogo {
+    padding-top: 10px;      /* aún menos espacio entre secciones */
+    padding-bottom: 70px;
+}
+
+/* Título de la segunda sección un poco más cerca de la ropa */
+.catalogo + .catalogo .categoria-titulo {
+    margin: 10px 0 15px;
 }
 
 .categoria-grid {

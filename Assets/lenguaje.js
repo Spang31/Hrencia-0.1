@@ -137,7 +137,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             actualizarTodo();
-            if (panel) panel.classList.add("active");
+            // Solo abrir el carrito automáticamente en pantallas grandes (no en móvil)
+            if (panel && window.innerWidth > 600) {
+                panel.classList.add("active");
+            }
         });
     });
 
